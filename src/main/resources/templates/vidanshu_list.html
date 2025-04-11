@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>VidanshuList</title>
+</head>
+<body>
+    <h1>VidanshuList</h1>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Description</th>
+        </tr>
+        <tr th:each="vidanshu : ${vidanshuList}">
+            <td th:text="${vidanshu.id}"></td>
+            <td th:text="${vidanshu.name}"></td>
+            <td th:text="${vidanshu.description}"></td>
+        </tr>
+    </table>
+    <a href="/vidanshu/add">Add-New-Vidanshu</a>
+</body>
+</html>
